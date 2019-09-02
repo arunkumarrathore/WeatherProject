@@ -23,7 +23,8 @@ WeatherAPI is the case study for Prudential and should be used as such.
 No major requirment is unimplemented but this code represent a crude solution of the given problem.
 
 # Possible improvement
-1. Use of MOQ for the better testability of the code.
-2. Use of dependency injection for loose coupling.
-3. Implemtation of better excepion handling.
-4. Better handling of http call to openweather API.
+1. More unit tests 
+2. Use of MOQ for the better testability of the code.
+3. Use of dependency injection for loose coupling.
+4. Implemtation of better excepion handling.
+5. Better handling of http call to openweather API.
