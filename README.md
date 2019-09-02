@@ -3,12 +3,13 @@ WeatherAPI is the case study for Prudential and should be used as such.
 
 # How to set up local project
 1. Set the following key in appsetting for web.config(api project) and app.config(test project)
+```
  <appSettings>
     <add key="AppId" value="subscriptionkey for openweathermap API"/>
     <add key="OutputFolderName" value="The name of output folder where you want data"/>
     <add key="WeatherApiUrl" value="https://api.openweathermap.org"/>
   </appSettings>
-
+```
 # Assumption for this API to work
 1. The city file name will be provided as parameter.
 2. File path will be a local file path and not of a FTP/Cloud server
@@ -24,5 +25,5 @@ No major requirment is unimplemented but this code represent a crude solution of
 # Possible improvement
 1. Use of MOQ for the better testability of the code.
 2. Use of dependency injection for loose coupling.
-3. Implemtation of better excepion handling. (not implemented due to time constraint)
-4. Better handling of http call to openweather API. (not implemented due to time constraint)
+3. Implemtation of better excepion handling.
+4. Better handling of http call to openweather API.
