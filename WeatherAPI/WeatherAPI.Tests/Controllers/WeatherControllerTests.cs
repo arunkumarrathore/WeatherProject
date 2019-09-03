@@ -2,7 +2,9 @@
 namespace WeatherAPI.Controllers.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using System.IO;
     using System.Net.Http;
+    using System.Reflection;
     using System.Web.Http;
     using WeatherAPI.Controllers;
     using WeatherAPI.WeatherMap.Implementation;
@@ -21,7 +23,7 @@ namespace WeatherAPI.Controllers.Tests
             weatherController.Request = new HttpRequestMessage();
             weatherController.Configuration = new HttpConfiguration();
 
-            HttpResponseMessage result = weatherController.GetWeather(@"C:\Users\Arun.kumar1\source\repos\WeatherAPI\WeatherAPI\CityInfoTestPositive.txt");
+            HttpResponseMessage result = weatherController.GetWeather($"{new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)).Parent.Parent.Parent.FullName}\\WeatherAPI\\CityInfoTestPositive.txt");
             Assert.AreEqual(result.StatusCode,System.Net.HttpStatusCode.OK);
         }
 
@@ -33,7 +35,7 @@ namespace WeatherAPI.Controllers.Tests
             weatherController.Request = new HttpRequestMessage();
             weatherController.Configuration = new HttpConfiguration();
 
-            HttpResponseMessage result = weatherController.GetWeather(@"C:\Users\Arun.kumar1\source\repos\WeatherAPI\WeatherAPI\CityInfoTestNegative.txt");
+            HttpResponseMessage result = weatherController.GetWeather($"{new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)).Parent.Parent.Parent.FullName}\\WeatherAPI\\CityInfoTestNegative.txt");
             Assert.AreEqual(result.StatusCode, System.Net.HttpStatusCode.BadRequest);
         }
 
@@ -45,7 +47,7 @@ namespace WeatherAPI.Controllers.Tests
             weatherController.Request = new HttpRequestMessage();
             weatherController.Configuration = new HttpConfiguration();
 
-            HttpResponseMessage result = weatherController.GetWeather(@"C:\Users\Arun.kumar1\source\repos\WeatherAPI\WeatherAPI\NoFile.txt");
+            HttpResponseMessage result = weatherController.GetWeather($"{new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)).Parent.Parent.Parent.FullName}\\WeatherAPI\\NoFile.txt");
             Assert.AreEqual(result.StatusCode, System.Net.HttpStatusCode.BadRequest);
         }
 
