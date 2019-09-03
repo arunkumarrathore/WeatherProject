@@ -11,7 +11,7 @@ WeatherAPI is the case study for Prudential and should be used as such.
   </appSettings>
 ```
 # Assumption for this API to work
-1. The city file name will be provided as parameter.
+1. The city file name will be provided as parameter (ex: http://localhost:62316/Weather/GetWeather?fileUrl=C:\SomeFolder\WeatherAPI\WeatherAPI\CityInfo.txt)
 2. File path will be a local file path and not of a FTP/Cloud server
 3. The output folder will be created on the same location as the input file.
 
@@ -28,3 +28,4 @@ No major requirment is unimplemented but this code represent a crude solution of
 3. Use of dependency injection for loose coupling.
 4. Implemtation of better excepion handling.
 5. Better handling of http call to openweather API.
+6. Secure API with something like OAuth2
