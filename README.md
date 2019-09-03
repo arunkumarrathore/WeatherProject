@@ -26,6 +26,6 @@ No major requirment is unimplemented but this code represent a crude solution of
 1. More unit tests 
 2. Use of MOQ for the better testability of the code.
 3. Use of dependency injection for loose coupling.
-4. Implemtation of better excepion handling.
+4. Implemtation of better exception handling.
 5. Better handling of http call to openweather API.
 6. Secure API with something like OAuth2
